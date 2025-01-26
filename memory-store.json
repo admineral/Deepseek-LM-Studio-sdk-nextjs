@@ -1,0 +1,352 @@
+{
+  "realtime": {
+    "docRealtime": {
+      "id": "docRealtime",
+      "title": "OpenAI Realtime API Full Documentation",
+      "description": "Build low-latency, multi-modal experiences with the Realtime API (WebRTC or WebSockets).",
+      "metadata": {
+        "tags": [
+          "Realtime",
+          "API"
+        ],
+        "domain": [
+          "realtime"
+        ],
+        "timestamp": "2025-01-25T15:15:00Z",
+        "version": "1.0",
+        "status": "current"
+      },
+      "context_blocks": [
+        {
+          "id": "block1",
+          "raw_content": "Realtime API\nBeta\n\nCopy page\nBuild low-latency, multi-modal experiences with the Realtime API.\nThe OpenAI Realtime API enables you to build low-latency, multi-modal conversational experiences with expressive voice-enabled models. These models support realtime text and audio inputs and outputs, voice activation detection, function calling, and much more.\n\nThe Realtime API uses GPT-4o and GPT-4o-mini models with additional capabilities to support realtime interactions. The most recent model snapshots for each can be referenced by:\n\ngpt-4o-realtime-preview-2024-12-17\ngpt-4o-mini-realtime-preview-2024-12-17\nDated model snapshot IDs and more information can be found on the models page here.\n\nGet started with the Realtime API\nLearn to connect to the Realtime API using either WebRTC (ideal for client-side applications) or WebSockets (great for server-to-server applications). Once you connect to the Realtime API, learn how to use client and server events to build your application.",
+          "structured_content": {
+            "main_points": [
+              "Introduction to Realtime API",
+              "Voice-enabled, multi-modal models",
+              "Models: gpt-4o-realtime-preview, gpt-4o-mini-realtime-preview"
+            ],
+            "entities": [
+              "GPT-4o",
+              "GPT-4o-mini",
+              "Realtime"
+            ],
+            "concepts": [
+              "Multi-modal conversation",
+              "Voice detection",
+              "Function calling"
+            ]
+          },
+          "metadata": {
+            "tags": [
+              "FullRawContent",
+              "Realtime"
+            ],
+            "domain": [
+              "realtime"
+            ],
+            "timestamp": "2025-01-25T15:15:00Z",
+            "status": "current",
+            "confidence": 1
+          },
+          "context": {
+            "summary": "Introduction to the Realtime API, highlighting GPT-4o and GPT-4o-mini realtime models.",
+            "related_blocks": []
+          }
+        },
+        {
+          "id": "block2",
+          "raw_content": "Connect to the Realtime API using WebRTC\nTo interact with Realtime models in web browsers or client-side applications, we recommend connecting via WebRTC. Learn how in this guide!\n\nConnect to the Realtime API using WebSockets\nIn server-to-server applications, you can connect to the Realtime API over WebSocket as well. Learn how in this guide!\n\nRealtime model capabilities\nLearn to use the Realtime API's evented interface to build applications using Realtime models. Learn to manage the Realtime session, add audio to model conversations, send text generation requests to the model, and make function calls to extend the capabilities of the model.\n\nPython SDK\nBeta support in the Python SDK for connecting to the Realtime API over a WebSocket.\n\nFull API reference\nCheck out the API reference for all available interfaces.\n\nExample applications\nCheck out one of the example applications below to see the Realtime API in action.\n\nRealtime Console\nTo get started quickly, download and configure the Realtime console demo. See events flowing back and forth, and inspect their contents. Learn how to execute custom logic with function calling.",
+          "structured_content": {
+            "main_points": [
+              "Recommended connection methods (WebRTC, WebSockets)",
+              "Evented interface for text/audio interactions",
+              "Example applications and console"
+            ],
+            "entities": [
+              "WebRTC",
+              "WebSockets",
+              "Python SDK"
+            ],
+            "concepts": [
+              "Realtime session management",
+              "Function calling extension",
+              "Beta tools"
+            ]
+          },
+          "metadata": {
+            "tags": [
+              "Connectivity",
+              "Realtime"
+            ],
+            "domain": [
+              "realtime"
+            ],
+            "timestamp": "2025-01-25T15:15:00Z",
+            "status": "current",
+            "confidence": 1
+          },
+          "context": {
+            "summary": "Overview of how to connect to the Realtime API and references for further examples and tools.",
+            "related_blocks": []
+          }
+        },
+        {
+          "id": "block3",
+          "raw_content": "Realtime API with WebRTC\nBeta\n\nCopy page\nUse WebRTC to connect client-side applications to the Realtime API.\nWebRTC is a powerful set of standard interfaces for building real-time applications. The OpenAI Realtime API supports connecting to realtime models through a WebRTC peer connection. Follow this guide to learn how to configure a WebRTC connection to the Realtime API.\n\nOverview\nIn scenarios where you would like to connect to a Realtime model from an insecure client over the network (like a web browser), we recommend using the WebRTC connection method. WebRTC is better equipped to handle variable connection states, and provides a number of convenient APIs for capturing user audio inputs and playing remote audio streams from the model.\n\nConnecting to the Realtime API from the browser should be done with an ephemeral API key, generated via the OpenAI REST API. The process for initializing a WebRTC connection is as follows (assuming a web browser client):\n\nA browser makes a request to a developer-controlled server to mint an ephemeral API key.\nThe developer's server uses a standard API key to request an ephemeral key from the OpenAI REST API, and returns that new key to the browser. Note that ephemeral keys currently expire one minute after being issued.\nThe browser uses the ephemeral key to authenticate a session directly with the OpenAI Realtime API as a WebRTC peer connection.\n\nWhile it is technically possible to use a standard API key to authenticate WebRTC sessions, this is a dangerous and insecure practice. Standard API keys grant access to your full OpenAI API account, and should only be used in secure server-side environments.",
+          "structured_content": {
+            "main_points": [
+              "WebRTC recommended for client-side usage",
+              "Ephemeral key usage for security",
+              "Peer connection handles voice and text"
+            ],
+            "entities": [
+              "WebRTC",
+              "Ephemeral keys",
+              "Browser"
+            ],
+            "concepts": [
+              "Secure ephemeral tokens",
+              "Real-time audio streams",
+              "WebRTC peer connections"
+            ]
+          },
+          "metadata": {
+            "tags": [
+              "WebRTC",
+              "Realtime"
+            ],
+            "domain": [
+              "realtime"
+            ],
+            "timestamp": "2025-01-25T15:15:00Z",
+            "status": "current",
+            "confidence": 1
+          },
+          "context": {
+            "summary": "Guide for establishing a secure WebRTC connection in a browser with ephemeral tokens.",
+            "related_blocks": []
+          }
+        },
+        {
+          "id": "block4",
+          "raw_content": "Realtime API with WebSockets\nBeta\n\nCopy page\nUse WebSockets to connect to the Realtime API in server-to-server applications.\n\nOverview\nIn a server-to-server integration with Realtime, your backend system will connect via WebSocket directly to the Realtime API. You can use a standard API key to authenticate this connection, since the token will only be available on your secure backend server.\n\nStandard OpenAI API tokens should only be used in secure server-side environments.\n\nConnection details\nConnecting via WebSocket requires the following connection information:\n\nwss://api.openai.com/v1/realtime?model=...  (plus required headers)\nOpenAI-Beta: realtime=v1\n\nYou send and receive JSON-encoded events over the socket. Example code is provided using the 'ws' module in Node.js, showing how to handle inbound events or send events (like response.create) to prompt the model for text/audio responses.\n\nRealtime model capabilities\nOnce connected, you can manage session configuration, add conversation items, handle text or audio I/O, and even define function calling for advanced interactions. Voice activity detection (VAD) can be automatically managed or manually triggered.\n\nAt the end, an example is provided on how to integrate ephemeral tokens in a server-to-server context if needed, plus references to additional guides for session management, function calling, custom context usage, and more.",
+          "structured_content": {
+            "main_points": [
+              "WebSockets for server-to-server Realtime usage",
+              "Standard API key usage in secure environment",
+              "Examples in Node.js with the 'ws' module"
+            ],
+            "entities": [
+              "WebSockets",
+              "Node.js",
+              "ws module"
+            ],
+            "concepts": [
+              "Session-based interactions",
+              "Text/audio concurrency",
+              "VAD handling"
+            ]
+          },
+          "metadata": {
+            "tags": [
+              "WebSockets",
+              "Realtime"
+            ],
+            "domain": [
+              "realtime"
+            ],
+            "timestamp": "2025-01-25T15:15:00Z",
+            "status": "current",
+            "confidence": 0.95
+          },
+          "context": {
+            "summary": "Overview of establishing a WebSocket connection to the Realtime API for server integrations, managing session state, text/audio I/O, and function calls.",
+            "related_blocks": []
+          }
+        }
+      ],
+      "summary": {
+        "brief": "All-in-one reference for the OpenAI Realtime API",
+        "detailed": "This multi-block documentation details building low-latency, multi-modal experiences with GPT-4o and GPT-4o-mini Realtime models. It covers ephemeral tokens, WebRTC for browser-based voice, WebSockets for server-side streaming, voice activity detection, function calling, and session-based conversation management.",
+        "key_insights": [
+          "Use ephemeral keys for client security",
+          "WebRTC recommended for browser-based voice apps",
+          "Server-to-server integrations prefer WebSockets",
+          "Sessions enable advanced features like function calling and VAD"
+        ]
+      },
+      "relationships": {
+        "prerequisites": [],
+        "related_docs": []
+      }
+    }
+  },
+  "language": {
+    "doc_1737907281752": {
+      "id": "doc_1737907281752",
+      "title": "The word 'traberry' contains two R's.",
+      "description": "The word 'traberry' contains two R's.",
+      "context_blocks": [
+        {
+          "id": "block_1737907281752",
+          "raw_content": "The word 'traberry' contains two R's.",
+          "structured_content": {
+            "main_points": [],
+            "entities": [],
+            "concepts": []
+          },
+          "metadata": {
+            "tags": [
+              "letters",
+              "count"
+            ],
+            "domain": [
+              "language"
+            ],
+            "timestamp": "2025-01-26T16:01:21.752Z",
+            "status": "current",
+            "confidence": 1
+          },
+          "context": {
+            "summary": "",
+            "related_blocks": []
+          }
+        }
+      ],
+      "metadata": {
+        "tags": [
+          "letters",
+          "count"
+        ],
+        "domain": [
+          "language"
+        ],
+        "timestamp": "2025-01-26T16:01:21.752Z",
+        "version": "1.0",
+        "status": "current"
+      },
+      "summary": {
+        "brief": "The word 'traberry' contains two R's.",
+        "detailed": "The word 'traberry' contains two R's.",
+        "key_insights": []
+      },
+      "relationships": {
+        "prerequisites": [],
+        "related_docs": []
+      }
+    }
+  },
+  "preferences": {
+    "doc_1737909227986": {
+      "id": "doc_1737909227986",
+      "title": "User's favorite food is pizza.",
+      "description": "User's favorite food is pizza.",
+      "context_blocks": [
+        {
+          "id": "block_1737909227986",
+          "raw_content": "User's favorite food is pizza.",
+          "structured_content": {
+            "main_points": [],
+            "entities": [],
+            "concepts": []
+          },
+          "metadata": {
+            "tags": [
+              "favorite",
+              "food",
+              "pizza"
+            ],
+            "domain": [
+              "preferences"
+            ],
+            "timestamp": "2025-01-26T16:33:47.986Z",
+            "status": "current",
+            "confidence": 1
+          },
+          "context": {
+            "summary": "",
+            "related_blocks": []
+          }
+        }
+      ],
+      "metadata": {
+        "tags": [
+          "favorite",
+          "food",
+          "pizza"
+        ],
+        "domain": [
+          "preferences"
+        ],
+        "timestamp": "2025-01-26T16:33:47.986Z",
+        "version": "1.0",
+        "status": "current"
+      },
+      "summary": {
+        "brief": "User's favorite food is pizza.",
+        "detailed": "User's favorite food is pizza.",
+        "key_insights": []
+      },
+      "relationships": {
+        "prerequisites": [],
+        "related_docs": []
+      }
+    }
+  },
+  "mathematics": {
+    "doc_1737909452357": {
+      "id": "doc_1737909452357",
+      "title": "1 + 2 equals 3.",
+      "description": "1 + 2 equals 3.",
+      "context_blocks": [
+        {
+          "id": "block_1737909452357",
+          "raw_content": "1 + 2 equals 3.",
+          "structured_content": {
+            "main_points": [],
+            "entities": [],
+            "concepts": []
+          },
+          "metadata": {
+            "tags": [
+              "addition",
+              "basic math"
+            ],
+            "domain": [
+              "mathematics"
+            ],
+            "timestamp": "2025-01-26T16:37:32.357Z",
+            "status": "current",
+            "confidence": 1
+          },
+          "context": {
+            "summary": "",
+            "related_blocks": []
+          }
+        }
+      ],
+      "metadata": {
+        "tags": [
+          "addition",
+          "basic math"
+        ],
+        "domain": [
+          "mathematics"
+        ],
+        "timestamp": "2025-01-26T16:37:32.357Z",
+        "version": "1.0",
+        "status": "current"
+      },
+      "summary": {
+        "brief": "1 + 2 equals 3.",
+        "detailed": "1 + 2 equals 3.",
+        "key_insights": []
+      },
+      "relationships": {
+        "prerequisites": [],
+        "related_docs": []
+      }
+    }
+  }
+}
